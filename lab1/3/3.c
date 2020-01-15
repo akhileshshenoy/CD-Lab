@@ -40,7 +40,7 @@ int main()
 	FILE *fa;
 	char buf[100];
 	int line=1,col=1,flag=0,last=0;
-	fa=fopen("q1.c","rw");
+	fa=fopen("abc.c","rw");
 	int ca;
 	while( fscanf(fa, "%s", buf) != EOF )
 	{
@@ -63,7 +63,7 @@ int main()
 			}
 			if(flag==0)
 			{
-				printf("LINE: %d, COLUMN: %d, ",line,ftell(fa)-last-strlen(keywords[i])+1);
+				printf("Line: %d, Column: %d, ",line,ftell(fa)-last-strlen(keywords[i])+1);
 				for(int j=0;j<strlen(keywords[i]);j++)
 					printf("%c",keywords[i][j]-32);
 				printf("\n");

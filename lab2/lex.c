@@ -18,7 +18,7 @@ int main()
 };
 
 	FILE *fa;
-	fa=fopen("inp.c","rw");
+	fa=fopen("program.c","rw");
 	int ca,k=0,row=1,column=1,last=0,flag=0;
 	token t; t.row=1; t.column=1;
 	ca=getc(fa);

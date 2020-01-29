@@ -69,8 +69,7 @@ TOKEN getToken(FILE *fa)
 			while(ca != '\n')
 			{
 				ca = getc(fa);
-			}	
-			printf("#\n");	
+			}		
 			line++;
 			col = 1;
 			last=ftell(fa);
@@ -115,7 +114,6 @@ TOKEN getToken(FILE *fa)
 		}
 		else if(ca == '\n')
 		{
-			printf("el,%d\n",line);
 			line++;
 			col = 1;
 			last=ftell(fa);
@@ -148,7 +146,7 @@ TOKEN getToken(FILE *fa)
 				{
 					strcpy(tk.lexeme,keywords[i]);
 					tk.row = line;
-					printf("line = %d,ftell = %ld ,flast = %ld \n",line,x,y );
+					
 					tk.column = x-last;//-strlen(keywords[i])+1;
 					tk.type = 4;
 					return tk;

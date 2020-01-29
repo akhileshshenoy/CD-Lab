@@ -43,7 +43,8 @@ void printArr()
 	printf("Id\tLexeme\tType\tSize\tScope\tNoOfArgs\targuments\tReturn type\n");
 	for (int i = 0; i < arrSize; ++i)
 	{
-		printf("%d\t%s\t%s\t%d\t%c\t%d\t\t%s\t\t%s\n",i+1,symArray[i].lexeme,symArray[i].type,symArray[i].size,symArray[i].scope,symArray[i].noOfArguments,symArray[i].argument,symArray[i].retType);	
+	
+			printf("%d\t%s\t%s\t%d\t%c\t%d\t\t%s\t\t%s\n",i+2,symArray[i].lexeme,symArray[i].type,symArray[i].size,symArray[i].scope,symArray[i].noOfArguments,symArray[i].argument,symArray[i].retType);	
 	}
 }
 
@@ -56,7 +57,7 @@ int main()
 	};
 
 	FILE *fa;
-	fa=fopen("inp.c","r");
+	fa=fopen("program.c","r");
 	int ca,k=0,last=0,flag=0;
 	token t; 
 	char lastType[10] = "";

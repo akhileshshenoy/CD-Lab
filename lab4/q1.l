@@ -7,7 +7,7 @@ int vow = 0;
 
 %%
 [aeiouAEIOU] {vow++;}
-[^aeiouAEIOU] {c++;}
+[A-Za-z] {c++;}
 %%
 
 int yywrap()
@@ -20,8 +20,6 @@ int main(int argc,char **argv)
 	yyin=fopen("q1.txt","r");
 	yylex();
 	printf("%d vowels and %d cons.",vow,c);
-	printf("aa");
-
 	return 0;
 }
 

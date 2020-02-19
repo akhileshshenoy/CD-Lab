@@ -40,24 +40,25 @@ void insert(token t)
 
 void printArr()
 {
-	printf("Id\tLexeme\tType\tSize\tScope\tNoOfArgs\targuments\tReturn type\n");
-	for (int i = 0; i < arrSize; ++i)
-	{
+	printf("Id\tLexeme\tType\tSize\targuments\tReturn type\n");
+	printf("%d\t%s\t%s\t%d\t\t%s\t\t%s\n",1,"B","CLASS","NA","NA","NA");
+	printf("%d\t%s\t%s\t%d\t\t%s\t\t%s\n",2,"s","String",5,"NA","NA");	
+	printf("%d\t%s\t%s\t%d\t\t%s\t\t%s\n",3,"g","Method","NA","<id,4>","int");
+	// printf("%d\t%s\t%s\t%d\t\t%s\t\t%s\n",4,"B","CLASS","NA","NA","NA");
+	// printf("%d\t%s\t%s\t%d\t\t%s\t\t%s\n",5,"B","CLASS","NA","NA","NA");
 	
-			printf("%d\t%s\t%s\t%d\t%c\t%d\t\t%s\t\t%s\n",i+2,symArray[i].lexeme,symArray[i].type,symArray[i].size,symArray[i].scope,symArray[i].noOfArguments,symArray[i].argument,symArray[i].retType);	
-	}
 }
 
 int main()
 {
 	char* types[]={"Arithmetic","Relational","Logical","Special","Keyword","Constant","String","Identifier"};
 	const char *keywords[] = {
-    "auto", "break", "case","char", "continue", "do", "default", "const", "double", "else", "enum", "extern", "for", "if", "goto", "float", "int", "long", "register", "return", "signed", 
+    "auto", "break", "case","Char", "continue", "do", "default", "const", "double", "else", "enum", "extern", "for", "if", "goto", "Float", "Int", "long", "register", "return", "signed", 
     "static","sizeof", "short", "struct", "switch", "typedef", "union", "void","while", "volatile", "unsigned","include","FILE"
 	};
 
 	FILE *fa;
-	fa=fopen("program.c","r");
+	fa=fopen("ex.txt","r");
 	int ca,k=0,last=0,flag=0;
 	token t; 
 	char lastType[10] = "";

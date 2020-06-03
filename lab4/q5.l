@@ -6,8 +6,8 @@
 %}
 
 %%
-[^.^"and"^"but]+"."  {printf("%s is compound.\n",yytext);}
-[^.]+"." {printf("%s is simple.\n",yytext);}
+.+("and"|"or"|"but").+"."  {printf("%s is compound.\n",yytext);}
+.+"." {printf("%s is simple.\n",yytext);}
 %%
 
 int yywrap()
